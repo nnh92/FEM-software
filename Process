@@ -1,22 +1,19 @@
 <mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36" version="28.1.1">
   <diagram name="Page-1" id="8378b5f6-a2b2-b727-a746-972ab9d02e00">
-    <mxGraphModel dx="1896" dy="813" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1.5" pageWidth="1169" pageHeight="1654" background="none" math="0" shadow="0">
+    <mxGraphModel dx="2231" dy="956" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1.5" pageWidth="1169" pageHeight="1654" background="none" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
         <mxCell id="PKwba_ZCbJq4WHA7hHal-279" value="Input" style="swimlane;html=1;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=26;fillColor=#ffe6cc;horizontalStack=0;resizeParent=1;resizeLast=0;collapsible=1;marginBottom=0;swimlaneFillColor=#ffffff;align=center;rounded=1;shadow=0;comic=0;labelBackgroundColor=none;strokeWidth=1;fontFamily=Verdana;fontSize=12;strokeColor=#d79b00;movable=1;resizable=1;rotatable=1;deletable=1;editable=1;locked=0;connectable=1;" parent="1" vertex="1">
           <mxGeometry x="345" y="10" width="110" height="250" as="geometry" />
         </mxCell>
-        <mxCell id="PKwba_ZCbJq4WHA7hHal-280" value="20250627" style="text;html=1;spacingLeft=4;spacingRight=4;whiteSpace=wrap;overflow=hidden;rotatable=1;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;strokeColor=#82b366;fillColor=#d5e8d4;movable=1;resizable=1;deletable=1;editable=1;locked=0;connectable=1;rounded=1;" parent="PKwba_ZCbJq4WHA7hHal-279" vertex="1">
+        <mxCell id="PKwba_ZCbJq4WHA7hHal-280" value="20250825" style="text;html=1;spacingLeft=4;spacingRight=4;whiteSpace=wrap;overflow=hidden;rotatable=1;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;strokeColor=#82b366;fillColor=#d5e8d4;movable=1;resizable=1;deletable=1;editable=1;locked=0;connectable=1;rounded=1;" parent="PKwba_ZCbJq4WHA7hHal-279" vertex="1">
           <mxGeometry y="26" width="110" height="26" as="geometry" />
         </mxCell>
-        <mxCell id="YMvPT5rgpnB7UhNJKo-V-22" value="20250820" style="text;html=1;spacingLeft=4;spacingRight=4;whiteSpace=wrap;overflow=hidden;rotatable=1;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;movable=1;resizable=1;deletable=1;editable=1;locked=0;connectable=1;rounded=1;fillColor=#d5e8d4;strokeColor=#82b366;" parent="PKwba_ZCbJq4WHA7hHal-279" vertex="1">
-          <mxGeometry y="52" width="110" height="26" as="geometry" />
-        </mxCell>
-        <mxCell id="7GXzpe08TrqEnxRHHlQo-44" value="&lt;span style=&quot;font-family: -apple-system, BlinkMacSystemFont, &amp;quot;Segoe UI&amp;quot;, &amp;quot;Noto Sans&amp;quot;, Helvetica, Arial, sans-serif, &amp;quot;Apple Color Emoji&amp;quot;, &amp;quot;Segoe UI Emoji&amp;quot;;&quot;&gt;&lt;font style=&quot;color: rgb(0, 0, 0);&quot;&gt;南部水再生センター汚泥貯留槽 No.2&lt;/font&gt;&lt;/span&gt;" style="text;html=1;strokeColor=#9673a6;fillColor=#e1d5e7;spacingLeft=4;spacingRight=4;whiteSpace=wrap;overflow=hidden;rotatable=1;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;labelBorderColor=none;textShadow=0;labelBackgroundColor=none;fontStyle=1;fontSize=16;movable=1;resizable=1;deletable=1;editable=1;locked=0;connectable=1;spacing=0;rounded=1;" parent="1" vertex="1">
+        <mxCell id="7GXzpe08TrqEnxRHHlQo-44" value="&lt;font face=&quot;-apple-system, BlinkMacSystemFont, Segoe UI, Noto Sans, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji&quot;&gt;FEM Software&lt;/font&gt;" style="text;html=1;strokeColor=#9673a6;fillColor=#e1d5e7;spacingLeft=4;spacingRight=4;whiteSpace=wrap;overflow=hidden;rotatable=1;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;labelBorderColor=none;textShadow=0;labelBackgroundColor=none;fontStyle=1;fontSize=16;movable=1;resizable=1;deletable=1;editable=1;locked=0;connectable=1;spacing=0;rounded=1;" parent="1" vertex="1">
           <mxGeometry width="290" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="4Ig3xdPQbXvtL4GHRRDK-52" value="2025.07.03" style="text;html=1;strokeColor=#9673a6;fillColor=#e1d5e7;spacingLeft=4;spacingRight=4;whiteSpace=wrap;overflow=hidden;rotatable=1;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;labelBorderColor=none;textShadow=0;labelBackgroundColor=none;fontStyle=1;fontSize=16;movable=1;resizable=1;deletable=1;editable=1;locked=0;connectable=1;spacing=0;rounded=1;" parent="1" vertex="1">
+        <mxCell id="4Ig3xdPQbXvtL4GHRRDK-52" value="2025.08.25" style="text;html=1;strokeColor=#9673a6;fillColor=#e1d5e7;spacingLeft=4;spacingRight=4;whiteSpace=wrap;overflow=hidden;rotatable=1;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;labelBorderColor=none;textShadow=0;labelBackgroundColor=none;fontStyle=1;fontSize=16;movable=1;resizable=1;deletable=1;editable=1;locked=0;connectable=1;spacing=0;rounded=1;" parent="1" vertex="1">
           <mxGeometry y="30" width="90" height="30" as="geometry" />
         </mxCell>
         <mxCell id="zr4sOY8RFZ8v_JMcBUcx-2" value="送付" style="swimlane;html=1;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=26;fillColor=#ffe6cc;horizontalStack=0;resizeParent=1;resizeLast=0;collapsible=1;marginBottom=0;swimlaneFillColor=#ffffff;align=center;rounded=1;shadow=0;comic=0;labelBackgroundColor=none;strokeWidth=1;fontFamily=Verdana;fontSize=12;strokeColor=#d79b00;" parent="1" vertex="1">
@@ -47,27 +44,6 @@
         <mxCell id="GYCmceplk5NpuEkzo9KT-2" value="20250822" style="text;html=1;spacingLeft=4;spacingRight=4;whiteSpace=wrap;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rounded=1;fillColor=#d5e8d4;strokeColor=#82b366;" parent="PKwba_ZCbJq4WHA7hHal-297" vertex="1">
           <mxGeometry y="52" width="160" height="26" as="geometry" />
         </mxCell>
-        <mxCell id="YMvPT5rgpnB7UhNJKo-V-17" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;curved=0;" parent="1" source="7GXzpe08TrqEnxRHHlQo-9" target="YMvPT5rgpnB7UhNJKo-V-19" edge="1">
-          <mxGeometry relative="1" as="geometry">
-            <Array as="points">
-              <mxPoint x="2745" y="740" />
-              <mxPoint x="2450" y="740" />
-              <mxPoint x="2450" y="620" />
-              <mxPoint x="2350" y="620" />
-            </Array>
-          </mxGeometry>
-        </mxCell>
-        <mxCell id="YMvPT5rgpnB7UhNJKo-V-48" value="&lt;font style=&quot;font-size: 13px; line-height: 150%;&quot;&gt;Plate elements, 補強後部荷重の更新&lt;/font&gt;" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];labelBorderColor=#FFB570;rounded=1;" parent="YMvPT5rgpnB7UhNJKo-V-17" vertex="1" connectable="0">
-          <mxGeometry x="-0.0451" y="2" relative="1" as="geometry">
-            <mxPoint x="84" y="-2" as="offset" />
-          </mxGeometry>
-        </mxCell>
-        <mxCell id="7GXzpe08TrqEnxRHHlQo-9" value="設計条件" style="swimlane;html=1;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=26;fillColor=#ffe6cc;horizontalStack=0;resizeParent=1;resizeLast=0;collapsible=1;marginBottom=0;swimlaneFillColor=#ffffff;align=center;rounded=1;shadow=0;comic=0;labelBackgroundColor=none;strokeWidth=1;fontFamily=Verdana;fontSize=12;strokeColor=#d79b00;movable=1;resizable=1;rotatable=1;deletable=1;editable=1;locked=0;connectable=1;" parent="1" vertex="1">
-          <mxGeometry x="2690" y="520" width="110" height="170" as="geometry" />
-        </mxCell>
-        <mxCell id="7GXzpe08TrqEnxRHHlQo-12" value="202507〇〇" style="text;html=1;spacingLeft=4;spacingRight=4;whiteSpace=wrap;overflow=hidden;rotatable=1;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;movable=1;resizable=1;deletable=1;editable=1;locked=0;connectable=1;rounded=1;" parent="7GXzpe08TrqEnxRHHlQo-9" vertex="1">
-          <mxGeometry y="26" width="110" height="28.153372018768916" as="geometry" />
-        </mxCell>
         <mxCell id="YMvPT5rgpnB7UhNJKo-V-9" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;curved=0;dashed=1;" parent="1" source="cV7bJp36mq6Ne4Wg9f6i-124" target="YMvPT5rgpnB7UhNJKo-V-3" edge="1">
           <mxGeometry relative="1" as="geometry">
             <Array as="points">
@@ -83,14 +59,6 @@
             <mxPoint as="offset" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="YMvPT5rgpnB7UhNJKo-V-18" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;curved=0;" parent="1" source="YMvPT5rgpnB7UhNJKo-V-19" target="YMvPT5rgpnB7UhNJKo-V-12" edge="1">
-          <mxGeometry relative="1" as="geometry" />
-        </mxCell>
-        <mxCell id="YMvPT5rgpnB7UhNJKo-V-49" value="&lt;font style=&quot;font-size: 13px; line-height: 150%;&quot;&gt;断面力（曲げモーメント、せん断力、軸力）&lt;/font&gt;" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];labelBorderColor=#FFB570;rounded=1;" parent="YMvPT5rgpnB7UhNJKo-V-18" vertex="1" connectable="0">
-          <mxGeometry x="0.0081" y="1" relative="1" as="geometry">
-            <mxPoint as="offset" />
-          </mxGeometry>
-        </mxCell>
         <mxCell id="cV7bJp36mq6Ne4Wg9f6i-124" value="MIDAS（既設）" style="swimlane;html=1;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=26;fillColor=#ffe6cc;horizontalStack=0;resizeParent=1;resizeLast=0;collapsible=1;marginBottom=0;swimlaneFillColor=#ffffff;align=center;rounded=1;shadow=0;comic=0;labelBackgroundColor=none;strokeWidth=1;fontFamily=Verdana;fontSize=12;strokeColor=#d79b00;movable=1;resizable=1;rotatable=1;deletable=1;editable=1;locked=0;connectable=1;container=0;" parent="1" vertex="1">
           <mxGeometry x="780" y="640" width="120" height="170" as="geometry" />
         </mxCell>
@@ -99,23 +67,6 @@
         </mxCell>
         <mxCell id="2ZJB9nyxR5eRsbUpEWlF-2" value="20250822" style="text;html=1;spacingLeft=4;spacingRight=4;whiteSpace=wrap;overflow=hidden;rotatable=1;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;movable=1;resizable=1;deletable=1;editable=1;locked=0;connectable=1;rounded=1;fillColor=#d5e8d4;strokeColor=#82b366;" parent="cV7bJp36mq6Ne4Wg9f6i-124" vertex="1">
           <mxGeometry y="54.15337201876892" width="120" height="28.153372018768916" as="geometry" />
-        </mxCell>
-        <mxCell id="YMvPT5rgpnB7UhNJKo-V-8" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;curved=0;" parent="1" source="YMvPT5rgpnB7UhNJKo-V-1" target="cV7bJp36mq6Ne4Wg9f6i-124" edge="1">
-          <mxGeometry relative="1" as="geometry">
-            <Array as="points">
-              <mxPoint x="400" y="757" />
-              <mxPoint x="500" y="757" />
-              <mxPoint x="500" y="540" />
-              <mxPoint x="840" y="540" />
-            </Array>
-            <mxPoint x="340" y="717.45" as="sourcePoint" />
-            <mxPoint x="780" y="637.45" as="targetPoint" />
-          </mxGeometry>
-        </mxCell>
-        <mxCell id="YMvPT5rgpnB7UhNJKo-V-37" value="&lt;div style=&quot;line-height: 150%;&quot;&gt;&lt;font style=&quot;font-size: 13px; line-height: 150%;&quot;&gt;1. Plate elements, Node&lt;/font&gt;&lt;div&gt;&lt;font style=&quot;font-size: 13px; line-height: 150%;&quot;&gt;2. 材料&lt;br&gt;&lt;/font&gt;&lt;div&gt;&lt;font style=&quot;font-size: 13px; line-height: 150%;&quot;&gt;3. 荷重：+ 設計水平震度&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font style=&quot;font-size: 13px; line-height: 150%;&quot;&gt;+ 固定荷重&lt;br&gt;+ 土圧荷重&lt;br&gt;+ 静水圧&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font style=&quot;font-size: 13px; line-height: 150%;&quot;&gt;+ 動水圧&lt;br&gt;+ 浮力&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font style=&quot;font-size: 13px; line-height: 150%;&quot;&gt;+ 杭頭曲げモーメント&lt;/font&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];labelBorderColor=#FFB570;rounded=1;" parent="YMvPT5rgpnB7UhNJKo-V-8" vertex="1" connectable="0">
-          <mxGeometry y="1" relative="1" as="geometry">
-            <mxPoint x="207" y="-19" as="offset" />
-          </mxGeometry>
         </mxCell>
         <mxCell id="YMvPT5rgpnB7UhNJKo-V-1" value="設計条件" style="swimlane;html=1;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=26;fillColor=#ffe6cc;horizontalStack=0;resizeParent=1;resizeLast=0;collapsible=1;marginBottom=0;swimlaneFillColor=#ffffff;align=center;rounded=1;shadow=0;comic=0;labelBackgroundColor=none;strokeWidth=1;fontFamily=Verdana;fontSize=12;strokeColor=#d79b00;movable=1;resizable=1;rotatable=1;deletable=1;editable=1;locked=0;connectable=1;container=0;" parent="1" vertex="1">
           <mxGeometry x="340" y="520" width="120" height="200" as="geometry" />
@@ -128,16 +79,6 @@
         </mxCell>
         <mxCell id="YMvPT5rgpnB7UhNJKo-V-10" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;dashed=1;" parent="1" source="YMvPT5rgpnB7UhNJKo-V-3" target="YMvPT5rgpnB7UhNJKo-V-5" edge="1">
           <mxGeometry relative="1" as="geometry" />
-        </mxCell>
-        <mxCell id="YMvPT5rgpnB7UhNJKo-V-50" value="&lt;div style=&quot;line-height: 150%;&quot;&gt;&lt;font style=&quot;font-size: 13px; line-height: 150%;&quot;&gt;常時、L1地震時照査：&lt;br&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;background-color: light-dark(#ffffff, var(--ge-dark-color, #121212)); color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;曲げモーメント照査&lt;/span&gt;&lt;/div&gt;&lt;/font&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;font style=&quot;font-size: 13px; line-height: 150%;&quot;&gt;せん断照査&lt;/font&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;font style=&quot;font-size: 13px; line-height: 150%;&quot;&gt;応力度照査：&lt;/font&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;font style=&quot;font-size: 13px; line-height: 150%;&quot;&gt;1. コンクリート&lt;/font&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;font style=&quot;font-size: 13px; line-height: 150%;&quot;&gt;2. 鉄筋&lt;/font&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;font style=&quot;font-size: 13px; line-height: 150%;&quot;&gt;3. せんだん応力度&lt;/font&gt;&lt;/div&gt;&lt;/div&gt;" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];labelBorderColor=#FFB570;rounded=1;" parent="YMvPT5rgpnB7UhNJKo-V-10" vertex="1" connectable="0">
-          <mxGeometry x="-0.2539" relative="1" as="geometry">
-            <mxPoint y="-46" as="offset" />
-          </mxGeometry>
-        </mxCell>
-        <mxCell id="YMvPT5rgpnB7UhNJKo-V-51" value="&lt;div style=&quot;line-height: 150%;&quot;&gt;&lt;font style=&quot;font-size: 13px; line-height: 150%;&quot;&gt;L2地震時照査：&lt;/font&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;font style=&quot;font-size: 13px; line-height: 150%;&quot;&gt;1. 曲げモーメントの終局照査&lt;/font&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;font style=&quot;font-size: 13px; line-height: 150%;&quot;&gt;2. せん断耐力の照査&lt;/font&gt;&lt;/div&gt;&lt;/div&gt;" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];labelBorderColor=#FFB570;rounded=1;" parent="YMvPT5rgpnB7UhNJKo-V-10" vertex="1" connectable="0">
-          <mxGeometry x="0.2764" y="2" relative="1" as="geometry">
-            <mxPoint y="-37" as="offset" />
-          </mxGeometry>
         </mxCell>
         <mxCell id="YMvPT5rgpnB7UhNJKo-V-3" value="断面算定結果" style="swimlane;html=1;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=26;fillColor=#ffe6cc;horizontalStack=0;resizeParent=1;resizeLast=0;collapsible=1;marginBottom=0;swimlaneFillColor=#ffffff;align=center;rounded=1;shadow=0;comic=0;labelBackgroundColor=none;strokeWidth=1;fontFamily=Verdana;fontSize=12;strokeColor=#d79b00;movable=1;resizable=1;rotatable=1;deletable=1;editable=1;locked=0;connectable=1;container=0;" parent="1" vertex="1">
           <mxGeometry x="325" y="950" width="150" height="210" as="geometry" />
@@ -157,118 +98,6 @@
         <mxCell id="F56_4VKffJw1oEoFIyM5-4" value="20250822" style="text;html=1;spacingLeft=4;spacingRight=4;whiteSpace=wrap;overflow=hidden;rotatable=1;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;movable=1;resizable=1;deletable=1;editable=1;locked=0;connectable=1;rounded=1;fillColor=#d5e8d4;strokeColor=#82b366;" parent="YMvPT5rgpnB7UhNJKo-V-5" vertex="1">
           <mxGeometry y="54.15337201876892" width="120" height="28.153372018768916" as="geometry" />
         </mxCell>
-        <mxCell id="YMvPT5rgpnB7UhNJKo-V-21" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;curved=0;" parent="1" source="YMvPT5rgpnB7UhNJKo-V-12" edge="1">
-          <mxGeometry relative="1" as="geometry">
-            <Array as="points">
-              <mxPoint x="2750" y="2150" />
-            </Array>
-            <mxPoint x="2910" y="2150" as="targetPoint" />
-          </mxGeometry>
-        </mxCell>
-        <mxCell id="YMvPT5rgpnB7UhNJKo-V-52" value="&lt;div style=&quot;line-height: 150%;&quot;&gt;&lt;font style=&quot;font-size: 13px; line-height: 150%;&quot;&gt;常時、L1地震時照査：&lt;br&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;background-color: light-dark(#ffffff, var(--ge-dark-color, #121212)); color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;曲げモーメント照査&lt;/span&gt;&lt;/div&gt;&lt;/font&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;font style=&quot;font-size: 13px; line-height: 150%;&quot;&gt;せん断照査&lt;/font&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;font style=&quot;font-size: 13px; line-height: 150%;&quot;&gt;応力度照査：&lt;/font&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;font style=&quot;font-size: 13px; line-height: 150%;&quot;&gt;1. コンクリート&lt;/font&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;font style=&quot;font-size: 13px; line-height: 150%;&quot;&gt;2. 鉄筋&lt;/font&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;font style=&quot;font-size: 13px; line-height: 150%;&quot;&gt;3. せんだん応力度&lt;/font&gt;&lt;/div&gt;&lt;/div&gt;" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];labelBorderColor=#FFB570;rounded=1;" parent="YMvPT5rgpnB7UhNJKo-V-21" vertex="1" connectable="0">
-          <mxGeometry x="-0.8749" y="1" relative="1" as="geometry">
-            <mxPoint y="127" as="offset" />
-          </mxGeometry>
-        </mxCell>
-        <mxCell id="YMvPT5rgpnB7UhNJKo-V-53" value="&lt;div style=&quot;line-height: 150%;&quot;&gt;&lt;font style=&quot;font-size: 13px; line-height: 150%;&quot;&gt;L2地震時照査：&lt;/font&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;font style=&quot;font-size: 13px; line-height: 150%;&quot;&gt;1. 曲げモーメントの終局照査&lt;/font&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;font style=&quot;font-size: 13px; line-height: 150%;&quot;&gt;2. せん断耐力の照査&lt;/font&gt;&lt;/div&gt;&lt;/div&gt;" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];labelBorderColor=#FFB570;rounded=1;" parent="YMvPT5rgpnB7UhNJKo-V-21" vertex="1" connectable="0">
-          <mxGeometry x="-0.7357" relative="1" as="geometry">
-            <mxPoint y="157" as="offset" />
-          </mxGeometry>
-        </mxCell>
-        <mxCell id="YMvPT5rgpnB7UhNJKo-V-12" value="耐震補強結果" style="swimlane;html=1;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=26;fillColor=#ffe6cc;horizontalStack=0;resizeParent=1;resizeLast=0;collapsible=1;marginBottom=0;swimlaneFillColor=#ffffff;align=center;rounded=1;shadow=0;comic=0;labelBackgroundColor=none;strokeWidth=1;fontFamily=Verdana;fontSize=12;strokeColor=#d79b00;movable=1;resizable=1;rotatable=1;deletable=1;editable=1;locked=0;connectable=1;container=0;" parent="1" vertex="1">
-          <mxGeometry x="2690" y="950" width="120" height="200" as="geometry" />
-        </mxCell>
-        <mxCell id="YMvPT5rgpnB7UhNJKo-V-13" value="202507〇〇" style="text;html=1;spacingLeft=4;spacingRight=4;whiteSpace=wrap;overflow=hidden;rotatable=1;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;movable=1;resizable=1;deletable=1;editable=1;locked=0;connectable=1;rounded=1;" parent="YMvPT5rgpnB7UhNJKo-V-12" vertex="1">
-          <mxGeometry y="26" width="120" height="28.153372018768916" as="geometry" />
-        </mxCell>
-        <mxCell id="YMvPT5rgpnB7UhNJKo-V-16" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="YMvPT5rgpnB7UhNJKo-V-14" target="7GXzpe08TrqEnxRHHlQo-9" edge="1">
-          <mxGeometry relative="1" as="geometry" />
-        </mxCell>
-        <mxCell id="YMvPT5rgpnB7UhNJKo-V-14" value="耐震補強案方針" style="swimlane;html=1;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=26;fillColor=#ffe6cc;horizontalStack=0;resizeParent=1;resizeLast=0;collapsible=1;marginBottom=0;swimlaneFillColor=#ffffff;align=center;rounded=1;shadow=0;comic=0;labelBackgroundColor=none;strokeWidth=1;fontFamily=Verdana;fontSize=12;strokeColor=#d79b00;movable=1;resizable=1;rotatable=1;deletable=1;editable=1;locked=0;connectable=1;" parent="1" vertex="1">
-          <mxGeometry x="2690" y="370" width="110" height="97.45398006496933" as="geometry" />
-        </mxCell>
-        <mxCell id="YMvPT5rgpnB7UhNJKo-V-15" value="20250709（予定）" style="text;html=1;spacingLeft=4;spacingRight=4;whiteSpace=wrap;overflow=hidden;rotatable=1;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;movable=1;resizable=1;deletable=1;editable=1;locked=0;connectable=1;rounded=1;" parent="YMvPT5rgpnB7UhNJKo-V-14" vertex="1">
-          <mxGeometry y="26" width="110" height="28.153372018768916" as="geometry" />
-        </mxCell>
-        <mxCell id="YMvPT5rgpnB7UhNJKo-V-19" value="MIDAS（補強）" style="swimlane;html=1;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=26;fillColor=#ffe6cc;horizontalStack=0;resizeParent=1;resizeLast=0;collapsible=1;marginBottom=0;swimlaneFillColor=#ffffff;align=center;rounded=1;shadow=0;comic=0;labelBackgroundColor=none;strokeWidth=1;fontFamily=Verdana;fontSize=12;strokeColor=#d79b00;movable=1;resizable=1;rotatable=1;deletable=1;editable=1;locked=0;connectable=1;container=0;" parent="1" vertex="1" collapsed="1">
-          <mxGeometry x="2290" y="640" width="130" height="30" as="geometry">
-            <mxRectangle x="930" y="640" width="120" height="250" as="alternateBounds" />
-          </mxGeometry>
-        </mxCell>
-        <mxCell id="YMvPT5rgpnB7UhNJKo-V-20" value="202507〇〇" style="text;html=1;spacingLeft=4;spacingRight=4;whiteSpace=wrap;overflow=hidden;rotatable=1;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;movable=1;resizable=1;deletable=1;editable=1;locked=0;connectable=1;rounded=1;" parent="YMvPT5rgpnB7UhNJKo-V-19" vertex="1">
-          <mxGeometry y="26" width="120" height="28.153372018768916" as="geometry" />
-        </mxCell>
-        <mxCell id="YMvPT5rgpnB7UhNJKo-V-29" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;curved=0;" parent="1" source="YMvPT5rgpnB7UhNJKo-V-27" target="YMvPT5rgpnB7UhNJKo-V-2" edge="1">
-          <mxGeometry relative="1" as="geometry">
-            <Array as="points">
-              <mxPoint x="90" y="630" />
-              <mxPoint x="160" y="630" />
-              <mxPoint x="160" y="560" />
-            </Array>
-          </mxGeometry>
-        </mxCell>
-        <mxCell id="P9lxTtXbVVpVzwEN5u6N-7" value="4日" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];rounded=1;" parent="YMvPT5rgpnB7UhNJKo-V-29" vertex="1" connectable="0">
-          <mxGeometry x="-0.702" y="2" relative="1" as="geometry">
-            <mxPoint as="offset" />
-          </mxGeometry>
-        </mxCell>
-        <mxCell id="YMvPT5rgpnB7UhNJKo-V-27" value="20250630" style="swimlane;html=1;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=26;fillColor=#d5e8d4;horizontalStack=0;resizeParent=1;resizeLast=0;collapsible=1;marginBottom=0;swimlaneFillColor=#ffffff;align=center;rounded=1;shadow=0;comic=0;labelBackgroundColor=none;strokeWidth=1;fontFamily=Verdana;fontSize=12;strokeColor=#82b366;movable=1;resizable=1;rotatable=1;deletable=1;editable=1;locked=0;connectable=1;container=0;" parent="1" vertex="1">
-          <mxGeometry x="30" y="510" width="120" height="98.06" as="geometry" />
-        </mxCell>
-        <mxCell id="YMvPT5rgpnB7UhNJKo-V-28" value="増田さんにお願いします。&lt;div&gt;（Excelの作成、鉄筋径、かぶり）&lt;/div&gt;" style="text;html=1;spacingLeft=4;spacingRight=4;whiteSpace=wrap;overflow=hidden;rotatable=1;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;movable=1;resizable=1;deletable=1;editable=1;locked=0;connectable=1;rounded=1;" parent="YMvPT5rgpnB7UhNJKo-V-27" vertex="1">
-          <mxGeometry y="26" width="120" height="64" as="geometry" />
-        </mxCell>
-        <mxCell id="YMvPT5rgpnB7UhNJKo-V-32" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;curved=0;" parent="1" source="YMvPT5rgpnB7UhNJKo-V-30" target="YMvPT5rgpnB7UhNJKo-V-6" edge="1">
-          <mxGeometry relative="1" as="geometry" />
-        </mxCell>
-        <mxCell id="P9lxTtXbVVpVzwEN5u6N-6" value="0.5日" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];rounded=1;" parent="YMvPT5rgpnB7UhNJKo-V-32" vertex="1" connectable="0">
-          <mxGeometry x="-0.8683" relative="1" as="geometry">
-            <mxPoint as="offset" />
-          </mxGeometry>
-        </mxCell>
-        <mxCell id="YMvPT5rgpnB7UhNJKo-V-30" value="20250703" style="swimlane;html=1;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=26;fillColor=#d5e8d4;horizontalStack=0;resizeParent=1;resizeLast=0;collapsible=1;marginBottom=0;swimlaneFillColor=#ffffff;align=center;rounded=1;shadow=0;comic=0;labelBackgroundColor=none;strokeWidth=1;fontFamily=Verdana;fontSize=12;strokeColor=#82b366;movable=1;resizable=1;rotatable=1;deletable=1;editable=1;locked=0;connectable=1;container=0;" parent="1" vertex="1">
-          <mxGeometry x="10" y="1330" width="120" height="70" as="geometry" />
-        </mxCell>
-        <mxCell id="YMvPT5rgpnB7UhNJKo-V-31" value="増田さんにお願いします。" style="text;html=1;spacingLeft=4;spacingRight=4;whiteSpace=wrap;overflow=hidden;rotatable=1;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;movable=1;resizable=1;deletable=1;editable=1;locked=0;connectable=1;rounded=1;" parent="YMvPT5rgpnB7UhNJKo-V-30" vertex="1">
-          <mxGeometry y="26" width="120" height="34" as="geometry" />
-        </mxCell>
-        <mxCell id="YMvPT5rgpnB7UhNJKo-V-40" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;curved=0;" parent="1" source="YMvPT5rgpnB7UhNJKo-V-38" edge="1">
-          <mxGeometry relative="1" as="geometry">
-            <mxPoint x="400" y="520" as="targetPoint" />
-          </mxGeometry>
-        </mxCell>
-        <mxCell id="YMvPT5rgpnB7UhNJKo-V-38" value="内容" style="swimlane;html=1;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=26;fillColor=#fff2cc;horizontalStack=0;resizeParent=1;resizeLast=0;collapsible=1;marginBottom=0;swimlaneFillColor=#ffffff;align=center;rounded=1;shadow=0;comic=0;labelBackgroundColor=none;strokeWidth=1;fontFamily=Verdana;fontSize=12;strokeColor=#d6b656;movable=1;resizable=1;rotatable=1;deletable=1;editable=1;locked=0;connectable=1;container=0;" parent="1" vertex="1">
-          <mxGeometry x="15" y="250" width="210" height="180" as="geometry" />
-        </mxCell>
-        <mxCell id="YMvPT5rgpnB7UhNJKo-V-39" value="1. 概要&lt;div&gt;2. 震診断方針&lt;/div&gt;&lt;div&gt;3. 使用材料及び材料の許容応力度&lt;/div&gt;&lt;div&gt;4.&amp;nbsp;荷重及び外力&lt;/div&gt;&lt;div&gt;5.&amp;nbsp;既存意匠図&lt;/div&gt;&lt;div&gt;6.&amp;nbsp;既存構造図&lt;/div&gt;&lt;div&gt;7.&amp;nbsp;荷重事項の整理&lt;/div&gt;&lt;div&gt;8.&amp;nbsp;FEM準備計算&lt;/div&gt;" style="text;html=1;spacingLeft=4;spacingRight=4;whiteSpace=wrap;overflow=hidden;rotatable=1;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;movable=1;resizable=1;deletable=1;editable=1;locked=0;connectable=1;rounded=1;" parent="YMvPT5rgpnB7UhNJKo-V-38" vertex="1">
-          <mxGeometry y="26" width="210" height="144" as="geometry" />
-        </mxCell>
-        <mxCell id="YMvPT5rgpnB7UhNJKo-V-46" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;curved=0;" parent="1" source="YMvPT5rgpnB7UhNJKo-V-43" target="cV7bJp36mq6Ne4Wg9f6i-124" edge="1">
-          <mxGeometry relative="1" as="geometry">
-            <mxPoint x="840" y="629.9999999999998" as="targetPoint" />
-          </mxGeometry>
-        </mxCell>
-        <mxCell id="YMvPT5rgpnB7UhNJKo-V-43" value="ケース" style="swimlane;html=1;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=26;fillColor=#ffe6cc;horizontalStack=0;resizeParent=1;resizeLast=0;collapsible=1;marginBottom=0;swimlaneFillColor=#ffffff;align=center;rounded=1;shadow=0;comic=0;labelBackgroundColor=none;strokeWidth=1;fontFamily=Verdana;fontSize=12;strokeColor=#d79b00;movable=1;resizable=1;rotatable=1;deletable=1;editable=1;locked=0;connectable=1;" parent="1" vertex="1">
-          <mxGeometry x="840" y="180" width="150" height="140" as="geometry" />
-        </mxCell>
-        <mxCell id="YMvPT5rgpnB7UhNJKo-V-44" value="1. 常時（空水）&lt;div&gt;2. 常時（満水）&lt;/div&gt;&lt;div&gt;3. L1地震時（空水）&lt;/div&gt;&lt;div&gt;4. L1地震時（満水）&lt;/div&gt;&lt;div&gt;5. L2地震時（満水）&lt;/div&gt;" style="text;html=1;spacingLeft=4;spacingRight=4;whiteSpace=wrap;overflow=hidden;rotatable=1;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;strokeColor=#82b366;fillColor=#d5e8d4;movable=1;resizable=1;deletable=1;editable=1;locked=0;connectable=1;rounded=1;" parent="YMvPT5rgpnB7UhNJKo-V-43" vertex="1">
-          <mxGeometry y="26" width="150" height="84" as="geometry" />
-        </mxCell>
-        <mxCell id="YMvPT5rgpnB7UhNJKo-V-58" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;curved=0;" parent="1" source="YMvPT5rgpnB7UhNJKo-V-56" target="YMvPT5rgpnB7UhNJKo-V-15" edge="1">
-          <mxGeometry relative="1" as="geometry">
-            <Array as="points">
-              <mxPoint x="2970" y="340" />
-              <mxPoint x="2660" y="340" />
-              <mxPoint x="2660" y="410" />
-            </Array>
-          </mxGeometry>
-        </mxCell>
-        <mxCell id="YMvPT5rgpnB7UhNJKo-V-56" value="20250704" style="swimlane;html=1;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=26;fillColor=#d5e8d4;horizontalStack=0;resizeParent=1;resizeLast=0;collapsible=1;marginBottom=0;swimlaneFillColor=#ffffff;align=center;rounded=1;shadow=0;comic=0;labelBackgroundColor=none;strokeWidth=1;fontFamily=Verdana;fontSize=12;strokeColor=#82b366;movable=1;resizable=1;rotatable=1;deletable=1;editable=1;locked=0;connectable=1;container=0;" parent="1" vertex="1">
-          <mxGeometry x="2910" y="250" width="120" height="70" as="geometry" />
-        </mxCell>
-        <mxCell id="YMvPT5rgpnB7UhNJKo-V-57" value="増田さんにお願いします。" style="text;html=1;spacingLeft=4;spacingRight=4;whiteSpace=wrap;overflow=hidden;rotatable=1;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;movable=1;resizable=1;deletable=1;editable=1;locked=0;connectable=1;rounded=1;" parent="YMvPT5rgpnB7UhNJKo-V-56" vertex="1">
-          <mxGeometry y="26" width="120" height="34" as="geometry" />
-        </mxCell>
         <mxCell id="movFZIv_pOzMl3zRNEMk-1" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;curved=0;" parent="1" source="PKwba_ZCbJq4WHA7hHal-280" target="YMvPT5rgpnB7UhNJKo-V-2" edge="1">
           <mxGeometry relative="1" as="geometry">
             <Array as="points">
@@ -279,24 +108,16 @@
             </Array>
           </mxGeometry>
         </mxCell>
-        <mxCell id="movFZIv_pOzMl3zRNEMk-5" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;curved=0;fillColor=#d5e8d4;strokeColor=#000000;" parent="1" source="YMvPT5rgpnB7UhNJKo-V-22" target="movFZIv_pOzMl3zRNEMk-3" edge="1">
-          <mxGeometry relative="1" as="geometry">
-            <Array as="points">
-              <mxPoint x="620" y="75" />
-              <mxPoint x="620" y="430" />
-              <mxPoint x="300" y="430" />
-              <mxPoint x="300" y="588" />
-            </Array>
-          </mxGeometry>
-        </mxCell>
         <mxCell id="movFZIv_pOzMl3zRNEMk-6" value="内容" style="swimlane;html=1;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=26;fillColor=#fff2cc;horizontalStack=0;resizeParent=1;resizeLast=0;collapsible=1;marginBottom=0;swimlaneFillColor=#ffffff;align=center;rounded=1;shadow=0;comic=0;labelBackgroundColor=none;strokeWidth=1;fontFamily=Verdana;fontSize=12;strokeColor=#d6b656;movable=1;resizable=1;rotatable=1;deletable=1;editable=1;locked=0;connectable=1;container=0;" parent="1" vertex="1">
           <mxGeometry x="65" y="90" width="210" height="80" as="geometry" />
         </mxCell>
-        <mxCell id="movFZIv_pOzMl3zRNEMk-7" value="No.2図面資料&lt;div&gt;HW = +1.6&lt;/div&gt;&lt;div&gt;バネ係数：No.1と同じ&lt;/div&gt;" style="text;html=1;spacingLeft=4;spacingRight=4;whiteSpace=wrap;overflow=hidden;rotatable=1;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;movable=1;resizable=1;deletable=1;editable=1;locked=0;connectable=1;rounded=1;fillColor=#d5e8d4;strokeColor=#82b366;" parent="movFZIv_pOzMl3zRNEMk-6" vertex="1">
+        <mxCell id="movFZIv_pOzMl3zRNEMk-7" value="Phân tích kết cấu bằng python,&lt;div&gt;GIống Midas và RM&lt;/div&gt;" style="text;html=1;spacingLeft=4;spacingRight=4;whiteSpace=wrap;overflow=hidden;rotatable=1;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;movable=1;resizable=1;deletable=1;editable=1;locked=0;connectable=1;rounded=1;fillColor=#d5e8d4;strokeColor=#82b366;" parent="movFZIv_pOzMl3zRNEMk-6" vertex="1">
           <mxGeometry y="26" width="210" height="54" as="geometry" />
         </mxCell>
-        <mxCell id="movFZIv_pOzMl3zRNEMk-8" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;curved=0;" parent="1" source="movFZIv_pOzMl3zRNEMk-7" target="YMvPT5rgpnB7UhNJKo-V-22" edge="1">
-          <mxGeometry relative="1" as="geometry" />
+        <mxCell id="movFZIv_pOzMl3zRNEMk-8" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;curved=0;" parent="1" source="movFZIv_pOzMl3zRNEMk-7" target="PKwba_ZCbJq4WHA7hHal-280" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="345" y="75" as="targetPoint" />
+          </mxGeometry>
         </mxCell>
         <mxCell id="movFZIv_pOzMl3zRNEMk-12" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;curved=0;" parent="1" source="F56_4VKffJw1oEoFIyM5-4" target="GYCmceplk5NpuEkzo9KT-2" edge="1">
           <mxGeometry relative="1" as="geometry">
@@ -348,20 +169,6 @@
               <mxPoint x="660" y="680" />
             </Array>
           </mxGeometry>
-        </mxCell>
-        <mxCell id="P9lxTtXbVVpVzwEN5u6N-3" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;curved=0;" parent="1" source="P9lxTtXbVVpVzwEN5u6N-1" target="YMvPT5rgpnB7UhNJKo-V-4" edge="1">
-          <mxGeometry relative="1" as="geometry" />
-        </mxCell>
-        <mxCell id="P9lxTtXbVVpVzwEN5u6N-4" value="2日" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];rounded=1;" parent="P9lxTtXbVVpVzwEN5u6N-3" vertex="1" connectable="0">
-          <mxGeometry x="-0.4119" relative="1" as="geometry">
-            <mxPoint as="offset" />
-          </mxGeometry>
-        </mxCell>
-        <mxCell id="P9lxTtXbVVpVzwEN5u6N-1" value="RC断面計算" style="swimlane;html=1;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=26;fillColor=#d5e8d4;horizontalStack=0;resizeParent=1;resizeLast=0;collapsible=1;marginBottom=0;swimlaneFillColor=#ffffff;align=center;rounded=1;shadow=0;comic=0;labelBackgroundColor=none;strokeWidth=1;fontFamily=Verdana;fontSize=12;strokeColor=#82b366;movable=1;resizable=1;rotatable=1;deletable=1;editable=1;locked=0;connectable=1;container=0;" parent="1" vertex="1">
-          <mxGeometry x="15" y="960" width="120" height="70" as="geometry" />
-        </mxCell>
-        <mxCell id="P9lxTtXbVVpVzwEN5u6N-2" value="20250709" style="text;html=1;spacingLeft=4;spacingRight=4;whiteSpace=wrap;overflow=hidden;rotatable=1;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;movable=1;resizable=1;deletable=1;editable=1;locked=0;connectable=1;rounded=1;" parent="P9lxTtXbVVpVzwEN5u6N-1" vertex="1">
-          <mxGeometry y="26" width="120" height="24" as="geometry" />
         </mxCell>
         <mxCell id="GYCmceplk5NpuEkzo9KT-1" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;curved=0;" parent="1" source="movFZIv_pOzMl3zRNEMk-10" target="y7sHuRtlq3iVEXeHqbM7-17" edge="1">
           <mxGeometry relative="1" as="geometry">
