@@ -5,7 +5,7 @@ import traceback
 import numpy as np
 import codecs
 from FEMUtils import FEMUtils
-from multiprocessing import Pool, cpu_count
+# from multiprocessing import Pool, cpu_count
 
 class Calcrate:
 
