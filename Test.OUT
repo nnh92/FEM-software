@@ -1,0 +1,126 @@
+****************************************************************************************************                    
+**             MIDAS/CIVIL V9.0.0 - Modeling, Integrated Design & Analysis Software               **                    
+**                         GENERAL STRUCTURE DESIGN SYSTEM FOR WINDOWS                            **                    
+****************************************************************************************************                    
+                                                                                                                        
+                                   ....xxxxxxxx*********xxxxxxxx......                                                  
+                               xXXXXXX***''               ```***XXXXXXXXXXx.                                            
+                           XXXXXXX                                   ``*XXXXXXXx.                                       
+         XXXXXXXXXX      XXXXXXX XX                                        `*XXXXXX.                                    
+         XXXXXXXXXXX    XXXXXX XXXX                                           `*XXXXX                                   
+         XXXXXXXXXXXX  XXXXXX XXXXX  XXXXX  XXXXXXXXXXx        XXXXX      .XXXX.`XXXXX                                  
+         XXXXXXXXXXXX::XXXXX XXXXXX  XXXXX  XXXXXXXXXXXX      XXXXXXX    :XXXXXX: XXXXX                                 
+         XXXXXX XXXXX XXXXX: XXXXXX  XXXXX  XXXXX   xXXXX    :XXXXXXX:   XXXX:     XXXXX                                
+         XXXXXX  XXXX XXXXX  XXXXXX  XXXXX  XXXXX    XXXXX  :XXXX:XXXX   XXXXXXXXX:                                     
+         XXXXXX  XXX XXXXX:  XXXXXX  XXXXX  XXXXX    :XXXX  XXXXX XXXXX   :XXXXXXXXXX                                   
+         XXXXXX  :XX XXXXX   XXXXXX  XXXXX  XXXXX    :XXXX :XXXX: :XXXX:    `:XXXXXXXX:                                 
+         XXXXXX   XX XXXXX   XXXXXX  XXXXX  XXXXX    XXXXX XXXXX   XXXXX XXXX     XXXXX                                 
+         XXXXXX   XX XXXXX   XXXXXX  XXXXX  XXXXX   xXXXX XXXXX:   :XXXXX:XXXX   .XXXX                                  
+         XXXXXX   :XXXXXXX   XXXXXX  XXXXX  XXXXXXXXXXXX :XXXX:     XXXXX XXXXXXXXXXX:                                  
+         XXXXXX    XXXXXXX   XXXXXX  XXXXX  XXXXXXXXXXx  XXXXX      :XXXXX `XXXXXXX'     /CIVIL                         
+                                                                                                                        
+         ----------------- PC WINDOWS XP/VISTA/7/8/10  VERSION. V9.0.0 ------------------                               
+                                                                                                                        
+                  Copyright ¨Ï SINCE 1989 MIDAS Information Technology Co., Ltd.                                        
+                           ALL RIGHTS RESERVED MIDAS IT Co., Ltd.                                                       
+                                                                                                                        
+****************************************************************************************************                    
+  
+  
+ -----------------------------------------S T A R T I N G       S O L U T I O N
+
+ MULTI-FRONTAL SOLVER
+ AVAILABLE MEMORY =   16.0 GBYTES
+
+ INTERNAL DATA REGENERATION ( ENTRY REGEN_MODEL )
+
+**  MIDAS/CIVIL WINDOWS VERSION 9.0.0                                DATE AUG/18/2025  TIME 13:17:43
+**  Modeling, Integrated Design & Analysis Software              PC WINDOWS XP/VISTA/7/8/10 VERSION 
+====================================================================================================
+  
+  
+ N U M B E R I N G   E Q U A T I O N
+ ===================================
+
+
+ INFORMATION FOR EQUATION NUMBER
+ -------------------------------
+
+  SERIAL   NODE          EQUATION NUMBERS FOR EACH DEGREE OF FREEDOM
+    NO.     NO.         X       Y        Z        XX       YY       ZZ
+ -------  -------   -------- -------- -------- -------- -------- --------
+      1        1           0        0        0        0        0        0
+      2        2           1        2        3        4        5        6
+      3        3           7        8        9       10       11       12
+      4        4          13       14       15       16       17       18
+      5        5          19       20       21       22       23       24
+      6        6          25       26       27       28       29       30
+      7        7          31       32       33       34       35       36
+      8        8          37       38       39       40       41       42
+      9        9           0        0        0        0        0        0
+
+
+ EQUATION STATUS
+ ---------------
+
+ TOTAL NUMBER OF VALID DOFS IN MODEL ..........:      42
+ NUMBER OF EQUATIONS IN A BLOCK ...............:      42
+ NUMBER OF BLOCKS .............................:       1
+ NUMBER OF INTERNAL LOADCASES .................:       1
+
+**  MIDAS/CIVIL WINDOWS VERSION 9.0.0                                DATE AUG/18/2025  TIME 13:17:43
+**  Modeling, Integrated Design & Analysis Software              PC WINDOWS XP/VISTA/7/8/10 VERSION 
+====================================================================================================
+  
+  
+
+
+ S E T U P   E Q U A T I O N   P R O F I L E
+ ===========================================
+
+
+ THE TOTAL WEIGHT OF MODEL
+ -------------------------
+
+ TOTAL WEIGHT ...........:  1.96000E+03   KN  
+
+
+ THE CENTER OF GRAVITY OF FINITE ELEMENT MODEL 
+ ---------------------------------------------
+
+ X-COORDINATE OF C.G ....:  2.00000E+01   M   
+ Y-COORDINATE OF C.G ....:  0.00000E+00   M   
+ Z-COORDINATE OF C.G ....:  0.00000E+00   M   
+
+ STATIC ANALYSIS TIME LOG ( IN SECOND )
+ --------------------------------------
+ MULTI-FRONTAL SOLUTION .....................:     0.05
+ DISPLACEMENT OUTPUT ........................:     0.00
+ STRESS OUTPUT ..............................:     0.01
+ TOTAL SOLUTION TIME (SUM OF THE ABOVE) .....:     0.06
+
+
+**  MIDAS/CIVIL WINDOWS VERSION 9.0.0                                DATE AUG/18/2025  TIME 13:17:43
+**  Modeling, Integrated Design & Analysis Software              PC WINDOWS XP/VISTA/7/8/10 VERSION 
+====================================================================================================
+  
+  
+
+
+ =========================================================
+ ** O V E R A L L   T I M E   L O G   I N   S E C O N D **
+ =========================================================
+
+  - INPUT DATA READING AND GENERATION ..........:     0.00
+  - FORM ELEMENT STIFFNESS MATRICES ............:     0.01
+  - FORM GLOBAL LOAD VECTOR ....................:     0.00
+  - FORM TOTAL STIFFNESS MATRICES ..............:     0.00
+  - P-DELTA ANALYSIS ...........................:     0.00
+  - STATIC ANALYSIS ............................:     0.06
+  - MOVING LOAD ANALYSIS .......................:     0.00
+  - SETTLEMENT ANALYSIS ........................:     0.00
+  - EIGENVALUE EXTRACTION ......................:     0.00
+  - RESPONSE SPECTRUM ANALYSIS .................:     0.00
+  - TIME HISTORY ANALYSIS ......................:     0.00
+  - PRINT DYNAMIC INFORMATION OUTPUT ...........:     0.06
+  - TOTAL ELAPSED TIME .........................:     0.13
