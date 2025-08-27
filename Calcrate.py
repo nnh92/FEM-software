@@ -32,8 +32,8 @@ class Calcrate:
         self.弾性係数     = np.zeros( self.MAX材料,         dtype=float)
         self.gk           = np.zeros( self.MAX材料,         dtype=float)
         self.断面積       = np.zeros( self.MAX材料,         dtype=float)
-        self.yi           = np.zeros( self.MAX材料,         dtype=float)
-        self.zi           = np.zeros( self.MAX材料,         dtype=float)
+        self.Iy           = np.zeros( self.MAX材料,         dtype=float)
+        self.Iz           = np.zeros( self.MAX材料,         dtype=float)
 
         self.要素数       = 0
         self.要素節点     = np.zeros((self.MAX要素, 2),     dtype=int)
@@ -51,12 +51,12 @@ class Calcrate:
 
         self.拘束条件数   = 0
         self.拘束条件節点 = np.zeros( self.MAX拘束条件,     dtype=int)
-        self.nxfx         = np.zeros( self.MAX拘束条件,     dtype=int)
-        self.nyfx         = np.zeros( self.MAX拘束条件,     dtype=int)
-        self.nzfx         = np.zeros( self.MAX拘束条件,     dtype=int)
-        self.mxfx         = np.zeros( self.MAX拘束条件,     dtype=int)
-        self.myfx         = np.zeros( self.MAX拘束条件,     dtype=int)
-        self.mzfx         = np.zeros( self.MAX拘束条件,     dtype=int)
+        self.nxfx         = np.zeros( self.MAX拘束条件,     dtype=float)
+        self.nyfx         = np.zeros( self.MAX拘束条件,     dtype=float)
+        self.nzfx         = np.zeros( self.MAX拘束条件,     dtype=float)
+        self.mxfx         = np.zeros( self.MAX拘束条件,     dtype=float)
+        self.myfx         = np.zeros( self.MAX拘束条件,     dtype=float)
+        self.mzfx         = np.zeros( self.MAX拘束条件,     dtype=float)
 
         self.分布荷重数   = 0
         self.分布荷重節点 = np.zeros((self.MAX分布荷重, 2), dtype=int)
@@ -109,8 +109,8 @@ class Calcrate:
             self.弾性係数[i]    = float(Range[5+i][4])
             self.gk[i]          = float(Range[5+i][5])
             self.断面積[i]      = float(Range[5+i][6])
-            self.yi[i]          = float(Range[5+i][7])
-            self.zi[i]          = float(Range[5+i][8])
+            self.Iy[i]          = float(Range[5+i][7])
+            self.Iz[i]          = float(Range[5+i][8])
 
         for i in range(self.要素数):
             self.要素節点[i][0] = int(Range[5+i][10])
@@ -496,8 +496,8 @@ class Calcrate:
                     te[i][j] = S
 
         G = self.弾性係数[M] * self.断面積[M] / EL
-        YYi = self.yi[M]
-        ZZi = self.zi[M]
+        YYi = self.Iy[M]
+        ZZi = self.Iz[M]
         if self.kTR1[jEL] == "0" and self.kTR2[jEL] == "0":
             YYi = 0
             ZZi = 0
@@ -555,39 +555,11 @@ class Calcrate:
 
         np.dot(ek2, t, out = self.Ek)
 
-    ####################################
-    ##     ３次元　変 位 の 計 算     ##
-    ##        ** HENikS.for **        ##
-    ####################################
-    def 変位計算(self):
-
-        FLOAD = np.zeros(6, dtype=float)
-
-        for i in range(self.節点数):
-            for j in range(6):
-                k = self.iD[j, i]
-                if k != 0:
-                    FLOAD[j] = self.FORCE[k - 1]
-                else:
-                    FLOAD[j] = 0  # đảm bảo gán 0 nếu k==0
-
-            self.変位[i, :] = FLOAD  # gán nguyên 6 phần tử cùng lúc
-        
-        for i in range(self.拘束条件数):
-            j = self.拘束条件節点[i] - 1
-            if 1 == self.nxfx[i]: self.変位[j][0] = 0
-            if 1 == self.nyfx[i]: self.変位[j][1] = 0
-            if 1 == self.nzfx[i]: self.変位[j][2] = 0
-            if 1 == self.mxfx[i]: self.変位[j][3] = 0
-            if 1 == self.myfx[i]: self.変位[j][4] = 0
-            if 1 == self.mzfx[i]: self.変位[j][5] = 0
-
     ##########################################################
     ##     ３次元の軸力，せん断力，曲げモーメントの計算         ##
     ##                 ** POWER2.for **                     ##
     ##########################################################
     def 結果出力(self):
-        gforce = np.zeros(12, dtype=float)
         gdisp  = np.zeros(12, dtype=float)
 
         encodings_to_try = ['utf-8', 'shift_jis']
@@ -619,8 +591,6 @@ class Calcrate:
             i, j = self.要素節点[k][0]-1, self.要素節点[k][1]-1
             gdisp[0:6]  = self.変位[i]
             gdisp[6:12] = self.変位[j]
-
-            gforce = self.Ek @ gdisp
 
             # --- Ma trận chuyển hướng te ---
             xi, yi, zi = self.節点X[i], self.節点Y[i], self.節点Z[i]
@@ -654,6 +624,9 @@ class Calcrate:
             for off in (0,3,6,9):
                 T[off:off+3, off:off+3] = te
 
+            gforce_global = self.Ek @ gdisp
+            gforce_local = T @ gforce_global
+
             # --- Gom UDL nếu có ---
             wxg = wyg = wzg = 0.0
             for m in range(getattr(self,'分布荷重数',0)):
@@ -671,15 +644,17 @@ class Calcrate:
                     0.5*L*wx, 0.5*L*wy, 0.5*L*wz, 0.0, wz*L**2/12.0, -wy*L**2/12.0
                 ])
                 fe_glo = T.T @ fe_loc
-                gforce -= fe_glo
+                gforce_global -= fe_glo
+                gforce_local -= fe_glo
 
             # --- Cập nhật phản lực ---
-            self.FORCE[i*6:i*6+6] += gforce[0:6]
-            self.FORCE[j*6:j*6+6] += gforce[6:12]
+            self.FORCE[i*6:i*6+6] += gforce_global[0:6]
+            self.FORCE[j*6:j*6+6] += gforce_global[6:12]
 
             # --- Xuất nội lực phần tử ---
             # Node đầu: xử lý moment và lực cắt theo quy ước dương
-            gforce_head = gforce[0:6].copy()
+            gforce_head = gforce_local[0:6].copy()
+            gforce_head[0] *= -1  # Fx (lực cắt)
             gforce_head[1] *= -1  # Fy (lực cắt)
             gforce_head[2] *= -1  # Fz (lực cắt)
             gforce_head[4] *= -1  # My (moment uốn)
@@ -691,7 +666,7 @@ class Calcrate:
 
             # Node cuối: giữ nguyên (theo FEM local)
             csv要素list.append(",{},{},{},{},{},{},{}".format(
-                j+1, *[FEMUtils.zero_if_small(g) for g in gforce[6:12]]
+                j+1, *[FEMUtils.zero_if_small(g) for g in gforce_local[6:12]]
             ))
 
         # ===== 5) Xuất phản lực =====
@@ -726,6 +701,33 @@ class Calcrate:
         if not written:
             traceback.print_exc()
             sys.exit(self.出力シート名 + ".csv の書き込みに失敗しました。")
+
+    ####################################
+    ##     ３次元　変 位 の 計 算     ##
+    ##        ** HENikS.for **        ##
+    ####################################
+    def 変位計算(self):
+
+        FLOAD = np.zeros(6, dtype=float)
+
+        for i in range(self.節点数):
+            for j in range(6):
+                k = self.iD[j, i]
+                if k != 0:
+                    FLOAD[j] = self.FORCE[k - 1]
+                else:
+                    FLOAD[j] = 0  # đảm bảo gán 0 nếu k==0
+
+            self.変位[i, :] = FLOAD  # gán nguyên 6 phần tử cùng lúc
+
+        for i in range(self.拘束条件数):
+            j = self.拘束条件節点[i] - 1
+            if 1 == self.nxfx[i]: self.変位[j][0] = 0
+            if 1 == self.nyfx[i]: self.変位[j][1] = 0
+            if 1 == self.nzfx[i]: self.変位[j][2] = 0
+            if 1 == self.mxfx[i]: self.変位[j][3] = 0
+            if 1 == self.myfx[i]: self.変位[j][4] = 0
+            if 1 == self.mzfx[i]: self.変位[j][5] = 0
 
     #########################################
     ##     ３次元　skyline  of  matrix     ##
@@ -829,113 +831,94 @@ class Calcrate:
         ek = np.zeros((12,12),dtype=float)
 
         M    = self.要素材料[jEL] -1
-        FAii = self.fai[jEL]
+        FAii = self.fai[jEL] # góc quay tiết diện (roll) quanh trục dọc
         i = self.要素節点[jEL][0] - 1
         j = self.要素節点[jEL][1] - 1
+        eps = 1e-12
         DX   = self.節点X[j] - self.節点X[i]
         DY   = self.節点Y[j] - self.節点Y[i]
         DZ   = self.節点Z[j] - self.節点Z[i]
         EL   = math.sqrt(DX * DX + DY * DY + DZ * DZ)
-
+        if EL < eps:
+            raise ValueError("Element length zero")
+        
+        # --- ma trận chuyển vị local → phần tử ---
         if DX == 0 and DY == 0:
-            te[0][0] = 0
-            te[0][1] = 0
-            te[0][2] = 1
-            te[1][0] = math.cos(FAii)
-            te[1][1] = math.sin(FAii)
-            te[1][2] = 0
-            te[2][0] = -math.sin(FAii)
-            te[2][1] = math.cos(FAii)
-            te[2][2] = 0
+            te[0] = [0,0,1]
+            te[1] = [math.cos(FAii), math.sin(FAii), 0]
+            te[2] = [-math.sin(FAii), math.cos(FAii), 0]
         else:
-            xl = DX / EL
-            XM = DY / EL
-            XN = DZ / EL
-            xlm = math.sqrt(xl * xl + XM * XM)
-            ts[0][0] = xl
-            ts[0][1] = XM
-            ts[0][2] = XN
-            ts[1][0] = -XM / xlm
-            ts[1][1] = xl / xlm
-            ts[1][2] = 0
-            ts[2][0] = -XN * xl / xlm
-            ts[2][1] = -XM * XN / xlm
-            ts[2][2] = xlm
-            tf[0][0] = 1
-            tf[0][1] = 0
-            tf[0][2] = 0
-            tf[1][0] = 0
-            tf[1][1] = math.cos(FAii)
-            tf[1][2] = math.sin(FAii)
-            tf[2][0] = 0
-            tf[2][1] = -math.sin(FAii)
-            tf[2][2] = math.cos(FAii)
+            xl = DX/EL
+            XM = DY/EL
+            XN = DZ/EL
+            xlm = math.sqrt(xl*xl + XM*XM)
+            ts[0] = [xl, XM, XN]
+            ts[1] = [-XM/xlm, xl/xlm, 0]
+            ts[2] = [-XN*xl/xlm, -XM*XN/xlm, xlm]
+            
+            tf[0] = [1,0,0]
+            tf[1] = [0, math.cos(FAii), math.sin(FAii)]
+            tf[2] = [0, -math.sin(FAii), math.cos(FAii)]
+            
+            np.dot(tf, ts, out=te)
 
-            np.dot(tf, ts, out = te)
-
-        G = self.弾性係数[M] * self.断面積[M] / EL
-        YYi = self.yi[M]
-        ZZi = self.zi[M]
         if self.kTR1[jEL] == "0" and self.kTR2[jEL] == "0": YYi, ZZi = 0, 0
-
-        EE  = self.弾性係数[M]
-        EL2 = EL * EL
-        EL3 = EL * EL2
-        Z6  = 6 * EE * ZZi / EL2
-        Z12 = 12 * EE * ZZi / EL3
-        Y6  = 6 * EE * YYi / EL2
-        Y12 = 12 * EE * YYi / EL3
-        GkL = self.gk[M] / EL
-        Y2  = 2 * EE * YYi / EL
-        Y4  = 2 * Y2
-        Z2  = 2 * EE * ZZi / EL
-        Z4  = 2 * Z2
+        EA_L  = self.弾性係数[M] * self.断面積[M] / EL       # axial
+        GJ_L  = self.gk[M] / EL                             # torsion (GJ/L)
+        E     = self.弾性係数[M]
+        Iy, Iz = self.Iy[M], self.Iz[M]
+        Y12, Y6, Y4, Y2 = 12*E*Iy/EL**3, 6*E*Iy/EL**2, 4*E*Iy/EL, 2*E*Iy/EL
+        Z12, Z6, Z4, Z2 = 12*E*Iz/EL**3, 6*E*Iz/EL**2, 4*E*Iz/EL, 2*E*Iz/EL
 
         for i in range(12):
             for j  in range(12):
                 self.Ek[i][j] = 0
-        
-        self.Ek[0] [0]  =  G        # Lực dọc (axial) EA/L
-        self.Ek[0] [6]  = -G        # Lực dọc (axial) EA/L
-        self.Ek[1] [1]  =  Z12      # Uốn theo trục Y (Iz)
-        self.Ek[1] [5]  =  Z6       # Uốn theo trục Y (Iz)
-        self.Ek[1] [7]  = -Z12      # Uốn theo trục Y (Iz)
-        self.Ek[1] [11] =  Z6       # Uốn theo trục Y (Iz)
-        self.Ek[2] [2]  =  Y12      # Uốn theo trục Z (Iy)
-        self.Ek[2] [4]  = -Y6       # Uốn theo trục Z (Iy)
-        self.Ek[2] [8]  = -Y12      # Uốn theo trục Z (Iy)
-        self.Ek[2] [10] = -Y6       # Uốn theo trục Z (Iy)
-        self.Ek[3] [3]  =  GkL      # Xoắn (torsion) GJ/L
-        self.Ek[3] [9]  = -GkL      # Xoắn (torsion) GJ/L
-        self.Ek[4] [4]  =  Y4       # Uốn theo trục Z (Iy)
-        self.Ek[4] [8]  =  Y6       # Uốn theo trục Z (Iy)
-        self.Ek[4] [10] =  Y2       # Uốn theo trục Z (Iy)
-        self.Ek[5] [5]  =  Z4       # Uốn theo trục Y (Iz)
-        self.Ek[5] [7]  = -Z6       # Uốn theo trục Y (Iz)
-        self.Ek[5] [11] =  Z2       # Uốn theo trục Y (Iz)
-        self.Ek[6] [6]  =  G        # Lực dọc (axial) EA/L
-        self.Ek[7] [7]  =  Z12      # Uốn theo trục Y (Iz)
-        self.Ek[7] [11] = -Z6       # Uốn theo trục Y (Iz)
-        self.Ek[8] [8]  =  Y12      # Uốn theo trục Z (Iy)
-        self.Ek[8] [10] =  Y6       # Uốn theo trục Z (Iy)
-        self.Ek[9] [9]  =  GkL      # Xoắn (torsion) GJ/L
-        self.Ek[10][10] =  Y4       # Uốn theo trục Z (Iy)
-        self.Ek[11][11] =  Z4       # Uốn theo trục Y (Iz)
+
+        # Axial
+        self.Ek[0,0] = self.Ek[6,6] = EA_L
+        self.Ek[0,6] = self.Ek[6,0] = -EA_L
+
+        # Torsion (rx ↔ index 3)
+        self.Ek[3,3] = self.Ek[9,9] = GJ_L
+        self.Ek[3,9] = self.Ek[9,3] = -GJ_L
+
+        # Bending about z (↔ uy, rz)  -> dùng Iz
+        self.Ek[1,1] = self.Ek[7,7] = Z12
+        self.Ek[1,7] = self.Ek[7,1] = -Z12
+        self.Ek[1,5] = self.Ek[5,1] =  Z6
+        self.Ek[1,11]= self.Ek[11,1]=  Z6
+        self.Ek[5,5] = self.Ek[11,11]= Z4
+        self.Ek[5,7] = self.Ek[7,5] = -Z6
+        self.Ek[5,11]= self.Ek[11,5]= Z2
+        self.Ek[7,11]= self.Ek[11,7]= -Z6
+
+        # Bending about y (↔ uz, ry)  -> dùng Iy
+        self.Ek[2,2] = self.Ek[8,8] = Y12
+        self.Ek[2,8] = self.Ek[8,2] = -Y12
+        self.Ek[2,4] = self.Ek[4,2] = -Y6
+        self.Ek[2,10]= self.Ek[10,2]= -Y6
+        self.Ek[4,4] = self.Ek[10,10]= Y4
+        self.Ek[4,8] = self.Ek[8,4] =  Y6
+        self.Ek[4,10]= self.Ek[10,4]=  Y2
+        self.Ek[8,10]= self.Ek[10,8]=  Y6
 
         i_lower = np.tril_indices(12, -1)
         self.Ek[i_lower] = self.Ek.T[i_lower]
         
         t[:, :] = 0
-        
+        # --- Gán t (12x12) block-diagonal của te ---
         for offset in [0, 3, 6, 9]:
             t[offset:offset+3, offset:offset+3] = te
 
         T = np.array(t)                   # ← convert list → ndarray
         Ek = np.array(self.Ek)
 
-        np.dot(T.T, Ek, out = ek) 
-        t = np.array(t)
-        self.Ek = np.dot(ek, t, out = self.Ek)
+        self.Ek = T.T @ self.Ek @ T
+        k = 0
+        for i in range(12):
+            for j in range(i, 12):
+                self.SE[k] = self.Ek[i][j]
+                k = k + 1
 
         if self.kTR1[jEL] == "5" and self.kTR2[jEL] == "7": self.elka1(3)
         if self.kTR1[jEL] == "6" and self.kTR2[jEL] == "7": self.elka1(4)
@@ -962,14 +945,6 @@ class Calcrate:
         if self.kTR1[jEL] == "2" and self.kTR2[jEL] == "2": self.elka5(1)
         if self.kTR1[jEL] == "1" and self.kTR2[jEL] == "1": self.elka5(2)
 
-        k = 0
-        for i in range(12):
-            for j in range(i, 12):
-                self.SE[k] = self.Ek[i][j]
-                k = k + 1
-
-        # Tính Ek global
-        self.Ek = T.T @ self.Ek @ T
         if return_T:
             return self.Ek, T
         else:
