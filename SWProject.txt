@@ -1,12 +1,18 @@
-<<<<<<< HEAD
 RMBridgeProject/
 │
-├─ main.py                     # entry point, chạy GUI chính
+
 ├─ requirements.txt
 ├─ README.md
-│
 ├─ src/                        # source code chính
+│   ├─ main.py                 # entry point, chạy GUI chính
 │   ├─ __init__.py
+│   ├─ core/                   # nơi chứa các entity chính của mô hình
+│   │   ├─ __init__.py
+│   │   ├─ project.py          # class Project
+│   │   ├─ node.py             # class Node
+│   │   ├─ element.py          # class Element
+│   │   ├─ material.py         # class Material
+│   │   └─ section.py          # mặt cắt ngang
 │   ├─ fem/                    # solver và tính toán
 │   │   ├─ __init__.py
 │   │   ├─ solver.py           # core FEM solver (tương đương elka1~elka5)
@@ -14,7 +20,7 @@ RMBridgeProject/
 │   │   ├─ load_combination.py # tạo vector tải kết hợp
 │   │   └─ utils.py            # hàm hỗ trợ FEM
 │   │
-│   ├─ io/                     # đọc/ghi file dữ liệu
+│   ├─ io_files/               # đọc/ghi file dữ liệu
 │   │   ├─ __init__.py
 │   │   ├─ midas_reader.py     # đọc dữ liệu từ Midas
 │   │   ├─ midas_writer.py     # xuất dữ liệu sang Midas
@@ -41,47 +47,3 @@ RMBridgeProject/
 │
 ├─ data/                        # file ví dụ, input/output
 └─ docs/                        # tài liệu dự án
-=======
-RMBridgeProject/
-│
-├─ main.py                     # entry point, chạy GUI chính
-├─ requirements.txt
-├─ README.md
-│
-├─ src/                        # source code chính
-│   ├─ __init__.py
-│   ├─ fem/                    # solver và tính toán
-│   │   ├─ __init__.py
-│   │   ├─ solver.py           # core FEM solver (tương đương elka1~elka5)
-│   │   ├─ torsion.py          # tính xoắn
-│   │   ├─ load_combination.py # tạo vector tải kết hợp
-│   │   └─ utils.py            # hàm hỗ trợ FEM
-│   │
-│   ├─ io/                     # đọc/ghi file dữ liệu
-│   │   ├─ __init__.py
-│   │   ├─ midas_reader.py     # đọc dữ liệu từ Midas
-│   │   ├─ midas_writer.py     # xuất dữ liệu sang Midas
-│   │   ├─ rmbridge_reader.py  # đọc dữ liệu RM Bridge
-│   │   └─ rmbridge_writer.py
-│   │
-│   ├─ gui/                    # GUI và 3D visualization
-│   │   ├─ __init__.py
-│   │   ├─ main_window.py      # main window (tree view + 3D view)
-│   │   ├─ tree_view.py        # riêng tree view
-│   │   ├─ view3d.py           # hiển thị mô hình 3D
-│   │   └─ result_display.py   # hiển thị kết quả FEM
-│   │
-│   └─ analysis/               # các module tính toán hỗ trợ
-│       ├─ __init__.py
-│       ├─ stress.py
-│       ├─ moment.py
-│       └─ report.py           # tổng hợp kết quả, xuất báo cáo
-│
-├─ tests/                      # unit test
-│   ├─ test_solver.py
-│   ├─ test_io.py
-│   └─ test_gui.py
-│
-├─ data/                        # file ví dụ, input/output
-└─ docs/                        # tài liệu dự án
->>>>>>> 202dd40af5f3e594f3d2243f95ccd748a2ac9c16

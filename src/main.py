@@ -1,8 +1,11 @@
 # main.py
-import sys
+import sys, os
+sys.path.insert(0, os.path.dirname(__file__))  # thêm src vào path
 from PyQt6.QtWidgets import QApplication
 from PyQt6.QtWidgets import QStyleFactory
-from src.gui.main_window import MainWindow
+from gui.main_window import MainWindow
+from io_files.fem_reader import load_rm
+from io_files.fem_writer import save_rm
 
 def main():
     app = QApplication(sys.argv)

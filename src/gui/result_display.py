@@ -143,6 +143,12 @@ class ResultDisplay(QWidget):
         self._wire_table(self.lane_table, editable=True)
         self._wire_table(self.results_label)
 
+        # --- Kết nối nút bấm với hiển thị panel ---
+        self.properties_btn.clicked.connect(lambda: self.stack.setCurrentWidget(self.properties_panel))
+        self.structure_btn.clicked.connect(lambda: self.stack.setCurrentWidget(self.structure_panel))
+        self.schedule_btn.clicked.connect(lambda: self.stack.setCurrentWidget(self.schedule_panel))
+
+
     # ----- Show các tab (giữ tên cũ) -----
     def show_3d(self): self.stack.setCurrentWidget(self.view3d_label)
     def show_node_table(self): self.stack.setCurrentWidget(self.node_table); self.node_table.setFocus()

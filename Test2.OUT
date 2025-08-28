@@ -34,7 +34,7 @@
 
  INTERNAL DATA REGENERATION ( ENTRY REGEN_MODEL )
 
-**  MIDAS/CIVIL WINDOWS VERSION 9.0.0                                DATE AUG/27/2025  TIME 16:43:54
+**  MIDAS/CIVIL WINDOWS VERSION 9.0.0                                DATE AUG/27/2025  TIME 17:13:14
 **  Modeling, Integrated Design & Analysis Software              PC WINDOWS XP/VISTA/7/8/10 VERSION 
 ====================================================================================================
   
@@ -59,22 +59,22 @@
       8        8          43       44       45       46       47       48
       9        9          49       50       51       52       53       54
      10       10          55       56       57       58       59       60
-     11       11          61       62       63       64       65       66
-     12       12          67       68       69       70       71       72
-     13       13          73       74       75       76       77       78
-     14       14          79       80       81       82       83       84
+     11       11           0        0        0        0        0        0
+     12       12          61       62       63       64       65       66
+     13       13          67       68       69       70       71       72
+     14       14          73       74       75       76       77       78
      15       15           0        0        0        0        0        0
 
 
  EQUATION STATUS
  ---------------
 
- TOTAL NUMBER OF VALID DOFS IN MODEL ..........:      84
- NUMBER OF EQUATIONS IN A BLOCK ...............:      84
+ TOTAL NUMBER OF VALID DOFS IN MODEL ..........:      78
+ NUMBER OF EQUATIONS IN A BLOCK ...............:      78
  NUMBER OF BLOCKS .............................:       1
  NUMBER OF INTERNAL LOADCASES .................:       1
 
-**  MIDAS/CIVIL WINDOWS VERSION 9.0.0                                DATE AUG/27/2025  TIME 16:43:54
+**  MIDAS/CIVIL WINDOWS VERSION 9.0.0                                DATE AUG/27/2025  TIME 17:13:14
 **  Modeling, Integrated Design & Analysis Software              PC WINDOWS XP/VISTA/7/8/10 VERSION 
 ====================================================================================================
   
@@ -101,12 +101,12 @@
  STATIC ANALYSIS TIME LOG ( IN SECOND )
  --------------------------------------
  MULTI-FRONTAL SOLUTION .....................:     0.06
- DISPLACEMENT OUTPUT ........................:     0.01
- STRESS OUTPUT ..............................:     0.00
+ DISPLACEMENT OUTPUT ........................:     0.00
+ STRESS OUTPUT ..............................:     0.01
  TOTAL SOLUTION TIME (SUM OF THE ABOVE) .....:     0.07
 
 
-**  MIDAS/CIVIL WINDOWS VERSION 9.0.0                                DATE AUG/27/2025  TIME 16:43:54
+**  MIDAS/CIVIL WINDOWS VERSION 9.0.0                                DATE AUG/27/2025  TIME 17:13:14
 **  Modeling, Integrated Design & Analysis Software              PC WINDOWS XP/VISTA/7/8/10 VERSION 
 ====================================================================================================
   
@@ -117,7 +117,7 @@
  ** O V E R A L L   T I M E   L O G   I N   S E C O N D **
  =========================================================
 
-  - INPUT DATA READING AND GENERATION ..........:     0.00
+  - INPUT DATA READING AND GENERATION ..........:     0.01
   - FORM ELEMENT STIFFNESS MATRICES ............:     0.00
   - FORM GLOBAL LOAD VECTOR ....................:     0.00
   - FORM TOTAL STIFFNESS MATRICES ..............:     0.01
@@ -129,4 +129,4 @@
   - RESPONSE SPECTRUM ANALYSIS .................:     0.00
   - TIME HISTORY ANALYSIS ......................:     0.00
   - PRINT DYNAMIC INFORMATION OUTPUT ...........:     0.07
-  - TOTAL ELAPSED TIME .........................:     0.15
+  - TOTAL ELAPSED TIME .........................:     0.16

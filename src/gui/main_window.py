@@ -1,5 +1,5 @@
 # main_window.py (menu tích hợp)
-from PyQt6.QtWidgets import QMainWindow, QWidget, QVBoxLayout, QSplitter, QTableWidgetItem
+from PyQt6.QtWidgets import QMainWindow, QWidget, QVBoxLayout, QSplitter, QTableWidgetItem, QApplication, QFileDialog, QMessageBox, QTextEdit
 from PyQt6.QtGui import QAction
 from PyQt6.QtCore import Qt
 from .tree_view import ModelTreeView
@@ -7,12 +7,23 @@ from .view3d import View3DWidget
 from .result_display import ResultDisplay
 import numpy as np
 from .node_dialog import NodeDialog
+from core.project import Project
+from io_files.fem_reader import load_rm
+from io_files.fem_writer import save_rm
 
 class MainWindow(QMainWindow):
     def __init__(self):
         super().__init__()
         self.setWindowTitle("FEM Software")
         self.resize(1400, 900)
+
+        # --- tạo project ---
+        self.project = Project()
+
+
+        # Text editor để demo (giả sử là file text)
+        self.editor = QTextEdit()
+        self.setCentralWidget(self.editor)
 
         # --- Panel trái: Tree + 3D ---
         self.tree_view = ModelTreeView()
@@ -76,6 +87,13 @@ class MainWindow(QMainWindow):
         file_menu.addSeparator()
         file_menu.addAction(self.exit_action)
 
+        # Shortcuts:
+        self.exit_action.setShortcut("Ctrl+Q")
+        self.new_action.setShortcut("Ctrl+N")
+        self.open_action.setShortcut("Ctrl+O")
+        self.save_action.setShortcut("Ctrl+S")
+
+
         # Properties Menu
         prop_menu = menubar.addMenu("Properties")
         self.material_action = QAction("Material", self)
@@ -128,6 +146,68 @@ class MainWindow(QMainWindow):
     def show_reactions(self):
         self.result_display.show_results("Reaction results here")
 
+    # --- New Project ---
+    def new_project(self):
+        reply = QMessageBox.question(self, "New Project",
+                                    "Bạn có muốn lưu project hiện tại trước khi tạo mới?",
+                                    QMessageBox.StandardButton.Yes |
+                                    QMessageBox.StandardButton.No |
+                                    QMessageBox.StandardButton.Cancel)
+        if reply == QMessageBox.StandardButton.Yes:
+            self.save_project()
+        elif reply == QMessageBox.StandardButton.Cancel:
+            return
+        self.project.clear()
+        self.update_gui_after_project_change()
+        print("Created new project")
+
+    # --- Open Project ---
+    def open_project(self):
+        path, _ = QFileDialog.getOpenFileName(self, "Open Project", "", 
+                                            "FEM Text Project (*.txt);;All Files (*)")
+        if path:
+            load_rm(path, self.project)
+            self.update_gui_after_project_change()
+            print(f"Project loaded from {path}")
+
+    # --- Save Project ---
+    def save_project(self):
+        if not self.project.filename:
+            return
+        save_rm(self.project.filename, self.project)
+        print(f"Project saved to {self.project.filename}")
+
+    # --- Save As ---
+    def save_project_as(self):
+        path, _ = QFileDialog.getSaveFileName(self, "Save Project As", "", 
+                                            "FEM Text Project (*.txt);;All Files (*)")
+        if path:
+            save_rm(path, self.project)
+            self.project.filename = path
+            print(f"Project saved as {path}")
+
+    # --- Exit ---
+    def exit_app(self):
+        reply = QMessageBox.question(self, "Exit",
+                                    "Bạn có muốn lưu project trước khi thoát?",
+                                    QMessageBox.StandardButton.Yes |
+                                    QMessageBox.StandardButton.No |
+                                    QMessageBox.StandardButton.Cancel)
+        if reply == QMessageBox.StandardButton.Yes:
+            self.save_project()
+        elif reply == QMessageBox.StandardButton.Cancel:
+            return
+        QApplication.quit()
+
+    # --- GUI update helper ---
+    def update_gui_after_project_change(self):
+        """
+        Cập nhật tree view, bảng node/element, 3D view
+        sau khi Project thay đổi (New/Open)
+        """
+        # TODO: implement: xóa bảng cũ, reload tree, reload 3D view
+        pass
+
     def connect_actions(self):
         self.node_action.triggered.connect(lambda: self.result_display.show_node_table())
         self.elem_action.triggered.connect(lambda: self.result_display.show_elem_table())
@@ -144,6 +224,14 @@ class MainWindow(QMainWindow):
         self.shear_action.triggered.connect(lambda: self.result_display.show_results("Shear results"))
         self.axial_action.triggered.connect(lambda: self.result_display.show_results("Axial results"))
         self.reaction_action.triggered.connect(lambda: self.result_display.show_results("Reaction results"))
+
+
+        # Thêm các action khác như New, Open, Save, Exit nếu cần
+        self.new_action.triggered.connect(self.new_project)
+        self.open_action.triggered.connect(self.open_project)
+        self.save_action.triggered.connect(self.save_project)
+        self.save_action.triggered.connect(self.save_project_as)
+        self.exit_action.triggered.connect(self.exit_app)
 
     def handle_tree_action(self, name):
         mapping = {
