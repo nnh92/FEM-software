@@ -1,5 +1,5 @@
 # src/gui/result_display.py
-from PyQt6.QtWidgets import QWidget, QVBoxLayout, QTableWidget, QTableWidgetItem, QStackedWidget, QLabel, QPushButton, QApplication
+from PyQt6.QtWidgets import QWidget, QVBoxLayout, QHBoxLayout, QTableWidget, QTableWidgetItem, QStackedWidget, QLabel, QPushButton, QApplication
 from PyQt6.QtCore import Qt, QEvent
 from PyQt6.QtGui import QKeySequence
 
@@ -11,8 +11,32 @@ class ResultDisplay(QWidget):
         self.run_button = QPushButton("RUN")
         self.run_button.setMaximumWidth(80)
         self.layout.addWidget(self.run_button)
-        self.layout.addWidget(self.stack)
         self.setLayout(self.layout)
+
+        # --- Layout con cho toolbar + bảng ---
+        self.table_layout = QVBoxLayout()
+
+        # Toolbar: Insert / Edit / Delete
+        self.toolbar_layout = QHBoxLayout()
+        self.insert_btn = QPushButton("Insert")
+        self.edit_btn = QPushButton("Edit")
+        self.delete_btn = QPushButton("Delete")
+        self.toolbar_layout.addWidget(self.insert_btn)
+        self.toolbar_layout.addWidget(self.edit_btn)
+        self.toolbar_layout.addWidget(self.delete_btn)
+        self.toolbar_layout.addStretch()  # đẩy nút về trái
+
+        # --- Bọc layout vào QWidget ---
+        self.toolbar_widget = QWidget()
+        self.toolbar_widget.setLayout(self.toolbar_layout)
+        self.toolbar_widget.setVisible(False)  # ẩn mặc định
+
+        # --- StackedWidget chứa các bảng ---
+        self.table_layout.addWidget(self.toolbar_widget)
+        self.layout.addWidget(self.stack)
+
+        # Thêm layout con vào layout chính
+        self.layout.addLayout(self.table_layout)
 
         # Tab 0: 3D view
         self.view3d_label = QLabel("3D View of Structure")
@@ -144,22 +168,21 @@ class ResultDisplay(QWidget):
         self._wire_table(self.results_label)
 
         # --- Kết nối nút bấm với hiển thị panel ---
-        self.properties_btn.clicked.connect(lambda: self.stack.setCurrentWidget(self.properties_panel))
-        self.structure_btn.clicked.connect(lambda: self.stack.setCurrentWidget(self.structure_panel))
-        self.schedule_btn.clicked.connect(lambda: self.stack.setCurrentWidget(self.schedule_panel))
-
+        self.insert_btn.clicked.connect(self.insert_row)
+        self.edit_btn.clicked.connect(self.edit_row)
+        self.delete_btn.clicked.connect(self.delete_row)
 
     # ----- Show các tab (giữ tên cũ) -----
-    def show_3d(self): self.stack.setCurrentWidget(self.view3d_label)
-    def show_node_table(self): self.stack.setCurrentWidget(self.node_table); self.node_table.setFocus()
-    def show_material_table(self): self.stack.setCurrentWidget(self.material_table); self.material_table.setFocus()
-    def show_section_table(self): self.stack.setCurrentWidget(self.section_table); self.section_table.setFocus()
-    def show_elem_table(self): self.stack.setCurrentWidget(self.elem_table); self.elem_table.setFocus()
-    def show_load_comb_table(self): self.stack.setCurrentWidget(self.load_comb_table); self.load_comb_table.setFocus()
-    def show_load_set_table(self): self.stack.setCurrentWidget(self.load_set_table); self.load_set_table.setFocus()
-    def show_load_case_table(self): self.stack.setCurrentWidget(self.load_case_table); self.load_case_table.setFocus()
-    def show_load_train_table(self): self.stack.setCurrentWidget(self.load_train_table); self.load_train_table.setFocus()
-    def show_lane_table(self): self.stack.setCurrentWidget(self.lane_table); self.lane_table.setFocus()
+    def show_3d(self): self.stack.setCurrentWidget(self.view3d_label); self.toolbar_widget.hide()
+    def show_node_table(self): self.stack.setCurrentWidget(self.node_table); self.toolbar_widget.show(); self.node_table.setFocus()
+    def show_material_table(self): self.stack.setCurrentWidget(self.material_table); self.toolbar_widget.show(); self.material_table.setFocus()
+    def show_section_table(self): self.stack.setCurrentWidget(self.section_table); self.toolbar_widget.show(); self.section_table.setFocus()
+    def show_elem_table(self): self.stack.setCurrentWidget(self.elem_table); self.toolbar_widget.show(); self.elem_table.setFocus()
+    def show_load_comb_table(self): self.stack.setCurrentWidget(self.load_comb_table); self.toolbar_widget.show(); self.load_comb_table.setFocus()
+    def show_load_set_table(self): self.stack.setCurrentWidget(self.load_set_table); self.toolbar_widget.show(); self.load_set_table.setFocus()
+    def show_load_case_table(self): self.stack.setCurrentWidget(self.load_case_table); self.toolbar_widget.show(); self.load_case_table.setFocus()
+    def show_load_train_table(self): self.stack.setCurrentWidget(self.load_train_table); self.toolbar_widget.show(); self.load_train_table.setFocus()
+    def show_lane_table(self): self.stack.setCurrentWidget(self.lane_table); self.toolbar_widget.show(); self.lane_table.setFocus()
     def show_results(self, text):
         if not hasattr(self, 'results_label'):
             self.results_label = QLabel()
@@ -169,6 +192,23 @@ class ResultDisplay(QWidget):
         self.results_label.setText(text)
         self.stack.setCurrentWidget(self.results_label)
         self.results_label.setFocus()
+
+    def show_panel(self, panel_name):
+        panel_map = {
+            "node": self.node_table,
+            "material": self.material_table,
+            "section": self.section_table,
+            "element": self.elem_table,
+            "load_comb": self.load_comb_table,
+            "load_set": self.load_set_table,
+            "load_case": self.load_case_table,
+            "load_train": self.load_train_table,
+            "lane": self.lane_table,
+        }
+        panel = panel_map.get(panel_name)
+        if panel:
+            self.stack.setCurrentWidget(panel)
+            self.toolbar_layout.parent().setVisible(True)
 
     # ----- Key event -----
     def keyPressEvent(self, event):
@@ -215,19 +255,10 @@ class ResultDisplay(QWidget):
                     source.setCurrentCell(row + 1, col)
                 return True
             # Delete: xóa dòng
+            # Delete: gọi chung delete_row()
             elif isinstance(source, QTableWidget) and event.key() == Qt.Key.Key_Delete:
-                row = source.currentRow()
-                total_rows = source.rowCount()
-                if total_rows > 1:
-                    source.removeRow(row)
-                else:
-                    # Nếu chỉ còn 1 dòng -> clear dữ liệu (giữ ID cột 0)
-                    item = source.item(row, 0)
-                    item.setText("1")
-                    for col in range(1, source.columnCount()):
-                        item = source.item(row, col)
-                        if item:
-                            item.setText("0.0")
+                self.delete_row()
+                return True
 
             # Ctrl+C: copy multi-cell
             elif event.matches(QKeySequence.StandardKey.Copy):
@@ -426,3 +457,46 @@ class ResultDisplay(QWidget):
                 item = QTableWidgetItem(str(val))
                 item.setFlags(item.flags() | Qt.ItemFlag.ItemIsEditable)
                 self.lane_table.setItem(i,col,item)
+
+    # --- Các hàm thao tác dữ liệu ---
+    def insert_row(self):
+        table = self.stack.currentWidget()
+        row = table.rowCount()
+        table.insertRow(row)
+
+    def edit_row(self):
+        table = self.stack.currentWidget()
+        row = table.currentRow()
+        if row >= 0:
+            # TODO: hiển thị dialog chỉnh sửa
+            pass
+
+    def delete_row(self):
+        table = self.stack.currentWidget()
+        if not isinstance(table, QTableWidget):
+            return
+
+        row = table.currentRow()
+        total_rows = table.rowCount()
+
+        if row < 0:  # không chọn dòng nào
+            return
+
+        if total_rows > 1:
+            table.removeRow(row)
+        else:
+            # Nếu chỉ còn 1 dòng -> clear dữ liệu (giữ ID cột 0)
+            item = table.item(0, 0)
+            if not item:
+                item = QTableWidgetItem("1")
+                table.setItem(0, 0, item)
+            else:
+                item.setText("1")
+
+            for col in range(1, table.columnCount()):
+                item = table.item(0, col)
+                if not item:
+                    item = QTableWidgetItem("0.0")
+                    table.setItem(0, col, item)
+                else:
+                    item.setText("0.0")

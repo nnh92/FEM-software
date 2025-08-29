@@ -36,6 +36,7 @@ RMBridgeProject/
 │   │
 │   └─ analysis/               # các module tính toán hỗ trợ
 │       ├─ __init__.py
+│       ├─ section_properties.py
 │       ├─ stress.py
 │       ├─ moment.py
 │       └─ report.py           # tổng hợp kết quả, xuất báo cáo
